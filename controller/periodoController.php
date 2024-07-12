@@ -10,12 +10,11 @@ class periodoController
 	{
 		if(isset($_POST['salvar']))
 		{
-			$pinicial = Util::clearparam($_POST['pinicial']);
-			$pfinal = Util::clearparam($_POST['pfinal']);
+			$pinicial = Util::clearparam($_POST['pinicial']);			
 			$id = Util::clearparam($_POST['id']);
 
 			$periodo = new Periodo();
-			$periodo->salvar($id,$pinicial,$pfinal);
+			$periodo->salvar($id,$pinicial);
 			header("Location: periodo_list.php");
 			exit();
 		}
@@ -63,7 +62,7 @@ class periodoController
 			$tabela .= '<tr>
 							<td>'.$linha['id'].'</td>
 							<td><a href="periodo_form.php?id='.$linha['id'].'">'.$linha['periodoinicial'].'</a></td>
-							<td><a href="periodo_form.php?id='.$linha['id'].'">'.$linha['periodofinal'].'</a></td>
+							
 						</tr>		
 							';
 		}

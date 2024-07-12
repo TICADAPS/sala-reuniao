@@ -13,8 +13,7 @@ function abrir($id){
 		,a.sala_id
 		,c.nome as sala
 		,a.periodo_id
-		,b.periodoinicial as inicial
-		,b.periodofinal as final
+		,b.periodoinicial as inicial		
 		,a.professor_desc
 		,a.disciplina_desc
 		,a.status
@@ -71,7 +70,7 @@ function abrir($id){
 		
 	}
 	
-	function salvar($id,$dia,$professor,$disciplina,$data,$observacao,$status,$sala,$periodo)
+	function salvar($id,$dia,$professor,$disciplina,$data,$observacao,$status,$sala,$periodo,$color,$textColor)
 	{
 	
 		$db = new Database();
@@ -85,7 +84,7 @@ function abrir($id){
 			,disciplina_desc = "'.$disciplina.'"
 			,observacao = "'.$observacao.'"
 			,status = '.$status.'
-			
+			,color = "'.$color.'"
 			where id  =	' . $id;
 			
 			$db->query_update($sql);
@@ -106,6 +105,8 @@ function abrir($id){
 			 ,disciplina_desc
 			 ,status
 			 ,observacao
+			 ,color
+			 ,textColor
 			)
 			VALUES
 			(
@@ -117,6 +118,8 @@ function abrir($id){
 			 ,"'.$disciplina.'" -- disciplina_desc - VARCHAR(255)
 			 ,'.$status.' -- status - INT(11) NOT NULL
 			 ,"'.$observacao.'" -- observacao - TEXT
+			 ,"'.$color.'" -- color - VARCHAR(45)
+			 ,"'.$textColor.'" -- textColor - VARCHAR(45)
 			) ';
 			
 			return $db->query_insert($sql);

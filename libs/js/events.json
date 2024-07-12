@@ -1,0 +1,62 @@
+[
+    {
+      "id": 1,
+      "title": "Todo evendo",
+      "start": "2024-08-01",
+      "end": "2024-08-02",
+      "color": "blue"
+    },
+    {
+      "id": 2,
+      "title": "Evento longo",
+      "start": "2024-07-07",
+      "end": "2024-08-10",
+      "color": "red",
+      "textColor": "yellow"
+    },
+    {
+      "id": "999",
+      "title": "Evento repetido",
+      "start": "2024-07-09T16:00:00-05:00"
+    },
+    {
+      "id": "999",
+      "title": "Evento repetido",
+      "start": "2024-07-16T16:00:00-05:00"
+    },
+    {
+      "title": "Conferência",
+      "start": "2024-07-11",
+      "end": "2024-07-13"
+    },
+    {
+      "title": "Meeting",
+      "start": "2024-07-12T10:30:00-05:00",
+      "end": "2024-07-12T12:30:00-05:00"
+    },
+    {
+      "title": "Almoço",
+      "start": "2024-07-12T12:00:00-05:00"
+    },
+    {
+      "title": "Meeting",
+      "start": "2024-07-12T14:30:00-05:00"
+    },
+    {
+      "title": "Happy Hour",
+      "start": "2024-07-12T17:30:00-05:00"
+    },
+    {
+      "title": "Jantar",
+      "start": "2024-07-12T20:00:00"
+    },
+    {
+      "title": "Festa de aniversário",
+      "start": "2024-07-13T07:00:00-05:00"
+    },
+    {
+      "title": "Click for Google",
+      "url": "http://google.com/",
+      "start": "2024-07-28"
+    }
+  ]

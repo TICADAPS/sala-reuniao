@@ -17,11 +17,11 @@ class Periodo
 		
 		$db = new Database();
 		
-		$sql = ' select * from periodo where id = '. $id; ;
+		$sql = ' select * from periodo where id = '. $id;
 		return $db->query($sql);
 	}
 	
-	function salvar($id,$pinicial,$pfinal)
+	function salvar($id,$pinicial)
 	{
 	
 		$db = new Database();
@@ -29,13 +29,13 @@ class Periodo
 		// inserir
 		if($id == 0)
 		{
-			$sql = 'insert into periodo ( periodoinicial,periodofinal ) values ("'.$pinicial.'","'.$pfinal.'")';
+			$sql = 'insert into periodo ( periodoinicial ) values ("'.$pinicial.'")';
 			return $db->query_insert($sql);
 		}
 		else
 		{ 
 			// atualizar
-			$sql = ' update periodo set periodoinicial = "'.$pinicial.'", periodofinal = "'.$pfinal.'" where id = ' .$id;
+			$sql = ' update periodo set periodoinicial = "'.$pinicial.'" where id = ' .$id;
 			return $db->query_update($sql);
 
 		}

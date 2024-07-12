@@ -20,8 +20,7 @@ class dashboardController
 		$periodos = $periodo->listar();
 
 		foreach ($periodos as $periodo) {			
-			$tabela_topo .= ' <th>' . $periodo['periodoinicial'] . '</th>';
-			$tabela_topo .= ' <th>' . $periodo['periodofinal'] . '</th>';
+			$tabela_topo .= ' <th>' . $periodo['periodoinicial'] . '</th>';			
 		}
 		$tabela_topo .= '</tr>';
 

@@ -34,7 +34,6 @@ if(isset($_GET['id']) && is_numeric($_GET['id']))
 		$disciplina_desc = '';
 		$observacao = '';
 		$inicial= '';
-		$final= '';
 		$sala = '';
 
 	}
@@ -60,7 +59,6 @@ foreach($a_options_status as $opt_stat)
 <input type="hidden" name="id" value="<?= $reg_id ?>" />
 <input type="hidden" name="sala" value="<?= $sala ?>" />
 <input type="hidden" name="inicial" value="<?= $inicial ?>" />
-<input type="hidden" name="final" value="<?= $final ?>" />
 <input type="hidden" name="sala_id" value="<?= $sala_id ?>" />
 <input type="hidden" name="periodo_id" value="<?= $periodo_id ?>" />
 

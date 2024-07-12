@@ -48,8 +48,7 @@ $lista = $periodoController->listarcontroller();
 <thead>
     <tr>
         <th> id </th>
-        <th> Período inicial </th>
-        <th> Período final </th>
+        <th> Período </th>        
 	</tr>
 </thead>
 

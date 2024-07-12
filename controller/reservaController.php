@@ -41,17 +41,20 @@ class ReservaController{
 			$id= Util::clearparam($_POST['id']);
 			$dia= Util::clearparam($_POST['dia']);
 			$professor= Util::clearparam($_POST['professor']);
-			$disciplina= Util::clearparam($_POST['disciplina']);
-			$dia= Util::clearparam($_POST['dia']);
+			$disciplina= Util::clearparam($_POST['disciplina']);		
 			$observacao = Util::clearparam($_POST['observacao']);
-			$status = Util::clearparam($_POST['status']);
-			
-			$sala= Util::clearparam($_POST['sala']);
-			$inicial= Util::clearparam($_POST['inicial']);
-			$final= Util::clearparam($_POST['final']);
-			
+			$status = Util::clearparam($_POST['status']);				
 			$sala_id = Util::clearparam($_POST['sala_id']);
 			$periodo_id = Util::clearparam($_POST['periodo_id']);
+			$color = "";
+			$textColor = "black";
+			if($status == '1'){
+				$color = "#FBFABB";
+			}elseif($status == '2'){
+				$color = "#BFF9B9";
+			}elseif($status == '3'){
+				$color = "#FCC5C5";
+			}
 			
 			$data = new DateTime();
 			$data = date_create_from_format('d/m/Y',$dia);
@@ -68,8 +71,8 @@ class ReservaController{
 				 }
 			}
 			
-			$id = $reserva->salvar($id,$dia,$professor,$disciplina,$data,$observacao,$status,$sala_id,$periodo_id);	
-			echo $id; // javascript espera esse id par asaber se registro inserido está ok
+			$id = $reserva->salvar($id,$dia,$professor,$disciplina,$data,$observacao,$status,$sala_id,$periodo_id,$color,$textColor);	
+			echo $id; // javascript espera esse id para saber se registro inserido está ok
 		
 			// verificar repetições:
 			$data_final = Util::clearparam($_POST['data_final']);
@@ -91,7 +94,7 @@ class ReservaController{
 					if(!isset($id_existente[0]['id'])){
 						// duplicar reserva para a data selecionada.
 						$id = 0;
-						$reserva->salvar($id,$dia,$professor,$disciplina,$data,$observacao,$status,$sala_id,$periodo_id);	
+						$reserva->salvar($id,$dia,$professor,$disciplina,$data,$observacao,$status,$sala_id,$periodo_id,$color,$textColor);	
 					}
 				
 					$data->modify('+7 day');

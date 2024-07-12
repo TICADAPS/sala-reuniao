@@ -1,0 +1,16 @@
+{
+    "name": "admin/sala-reuniao",
+    "description": "\"Sistema de agendamento de sala de reunião\"",
+    "autoload": {
+        "psr-4": {
+            "Classes\\": "class",
+            "Models\\": "model"
+        }
+    },
+    "authors": [
+        {
+            "name": "\"Marcelo Farias\""
+        }
+    ],
+    "require": {}
+}

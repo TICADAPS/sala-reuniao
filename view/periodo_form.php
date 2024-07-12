@@ -10,15 +10,13 @@ $periodo = $periodoController->salvar();
 $periodo = $periodoController->abrir();
 //var_dump($periodo[0]);
 if (isset($periodo[0])){
-    $pinicial = $periodo[0]['periodoinicial'];
-    $pfinal = $periodo[0]['periodofinal'];
+    $pinicial = $periodo[0]['periodoinicial'];    
     $id = $periodo[0]['id'];
 }
     //extract($periodo[0]);
 
 if (!isset($id)) {
     $pinicial = '';
-    $pfinal = '';
     $id = 0;
 }
 
@@ -60,19 +58,12 @@ if (!isset($id)) {
 
             <table class="tabela_comum" cellpadding="4" cellspacing="4">
                 <tr>
-                    <td width="100"> Inicial </td>
+                    <td width="100"> Período </td>
                     <td><input type="text" name="pinicial" id="pinicial" value="<?= $pinicial ?>" /> </td>
                     <td width="30"></td>
                     <td width="100"> </td>
                     <td> </td>
-                </tr>
-                <tr>
-                    <td width="100"> Final </td>
-                    <td><input type="text" name="pfinal" id="pfinal" value="<?= $pfinal ?>" /> </td>
-                    <td width="30"></td>
-                    <td width="100"> </td>
-                    <td> </td>
-                </tr>
+                </tr>                
             </table>
 
 
@@ -88,6 +79,6 @@ if (!isset($id)) {
 <script src="js/mask.js"></script>
 <script>
 $('#pinicial').mask('00:00:00'); //CPF
-$('#pfinal').mask('00:00:00'); //CPF
+//$('#pfinal').mask('00:00:00'); //CPF
 </script>
 </html>
